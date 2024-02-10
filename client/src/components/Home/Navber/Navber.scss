@@ -1,0 +1,131 @@
+@import "../../../css-config/mixins.scss";
+
+.main-header {
+    width: 100%;
+    padding: 0 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 99;
+
+
+    @include md {
+        padding: 0 40px;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 100%;
+
+        .logo {
+            display: none;
+            cursor: pointer;
+
+            img {
+                width: 6rem;
+                transform: scale(1.5);
+            }
+
+            @include xl {
+                display: inline;
+            }
+        }
+
+        .nav-btn {
+            color: black;
+            font-size: 4rem;
+            cursor: pointer;
+
+            @include lg {
+                display: none;
+            }
+        }
+
+        .nav-item {
+            //responsive section
+            position: absolute;
+            display: block;
+            top: 5rem;
+            left: -100%;
+            width: 100%;
+            padding-top: 1rem;
+            background: transparent;
+            transition: all .8s ease;
+            z-index: 1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                opacity: 0.3;
+            }
+
+
+
+            @include lg {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1.3rem 1.5rem;
+                position: static;
+            }
+
+            a {
+                list-style: none;
+                text-decoration: none;
+                color: black;
+                text-align: center;
+                padding: .5rem .8rem;
+                display: block;
+                font-size: 1.8rem;
+                font-weight: 800;
+                cursor: pointer;
+
+            }
+
+            &.active {
+                left: 0;
+                background: #fff;
+            }
+        }
+
+        .login {
+            background: green;
+            padding: .3rem .8rem;
+            border-radius: 3rem;
+            font-weight: 700;
+            cursor: pointer;
+
+            a {
+                list-style: none;
+                text-decoration: none;
+                font-size: 1.8rem;
+                color: white;
+            }
+        }
+
+
+    }
+
+    &.sticky-header {
+        position: sticky;
+        top: 0;
+        animation: stickeyHeader .6s ease forwards;
+        transform: translateY(-80px);
+    }
+}
+
+@keyframes stickeyHeader {
+    0% {
+        transform: translateY(-80px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

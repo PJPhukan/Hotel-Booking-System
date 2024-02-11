@@ -1,5 +1,5 @@
 import React from 'react'
-import './Location.scss'
+import "./Location.scss"
 const Location = () => {
   return (
     <div>

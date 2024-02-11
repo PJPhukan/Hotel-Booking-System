@@ -8,6 +8,7 @@ import About from "./components/About/About"
 import Location from "./components/Map/Location"
 import Contact from "./components/Contact/Contact"
 import Login from "./components/Home/Navber/Login"
+import Popular from "./components/PopularHotel/Popular"
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
         </Routes>
+        <Popular/>
       </BrowserRouter>
     </>
   )

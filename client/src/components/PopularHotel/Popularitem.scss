@@ -1,0 +1,66 @@
+@import '../../css-config/mixins.scss';
+
+.noteItem-header {
+    height: 28rem;
+    width: 22rem;
+    // border: 2px solid black;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 2rem;
+    background: rgba($color: #000000, $alpha: .02);
+    transition: all .5s;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0px 0 4px black;
+    }
+
+    img {
+        width: 100%;
+        height: 66%;
+        object-fit: cover;
+        transition: all .5s;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+
+    .text-box {
+        margin: .8rem 1rem;
+
+        .address {
+            font-size: 1rem;
+            font-weight: 300;
+            color: green;
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .price-rating {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 2px;
+
+            .price {
+                font-weight: 300;
+            }
+
+            .icon {
+                color: gold;
+                margin-top: 2px;
+                padding-top: 2px;
+
+                &:nth-child(5) {
+                    color: rgb(61, 47, 47);
+                }
+            }
+        }
+
+    }
+}

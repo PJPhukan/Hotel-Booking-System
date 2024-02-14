@@ -15,10 +15,10 @@ const HomeBanner = () => {
     <div className='home-header'>
       <div className="container-box">
         <div className="text-box">
-          <h1>Find Your Perfect Place To Stay</h1>
+          <div className='header'>Find Your Perfect Place To Stay</div>
           <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus tempora minima, nam praesentium libero totam molestias dolor?</h4>
           <button className='video-click' onClick={() => { setshowVideo(true) }}>
-            <span>{<FaRegPlayCircle  />}</span>Watch Video</button>
+            <span>{<FaRegPlayCircle />}</span>Watch Video</button>
         </div>
 
 
@@ -29,8 +29,8 @@ const HomeBanner = () => {
           {
             showVideo && <div className="video-box">
               <div class="video">
-                <video src={watchVideo} controls autoplay ></video>
-                <RxCross2 className='cross' onClick={setshowVideo(false)} />
+                <video src={watchVideo} controls autoplay muted loop></video>
+                <RxCross2 className='cross' onClick={() => { setshowVideo(false) }} />
               </div>
             </div>
           }

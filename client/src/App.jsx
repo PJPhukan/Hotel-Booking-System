@@ -26,6 +26,7 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
         <Popular/>
+        <Facilities/>
       </BrowserRouter>
     </>
   )

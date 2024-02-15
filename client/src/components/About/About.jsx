@@ -2,8 +2,10 @@ import React from 'react'
 import './About.scss'
 
 import aboutImg from '../../assets/aboutHistry.jpg'
+import Testimonial from './Testimonial'
 const About = () => {
   return (
+    <>
     <div className='about-header'>
       <div className="img-box">
         <img src={aboutImg} alt="" />
@@ -18,6 +20,8 @@ const About = () => {
         <button className="explore-btn">Explore More</button>
       </div>
     </div>
+    <Testimonial/>
+    </>
   )
 }
 

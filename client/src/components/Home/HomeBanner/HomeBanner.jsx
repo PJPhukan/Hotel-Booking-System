@@ -28,8 +28,8 @@ const HomeBanner = () => {
 
           {
             showVideo && <div className="video-box">
-              <div class="video">
-                <video src={watchVideo} controls autoplay muted loop></video>
+              <div className="video">
+                <video src={watchVideo} controls autoPlay muted loop></video>
                 <RxCross2 className='cross' onClick={() => { setshowVideo(false) }} />
               </div>
             </div>

@@ -9,6 +9,7 @@ import Location from "./components/Map/Location"
 import Contact from "./components/Contact/Contact"
 import Login from "./components/Home/Navber/Login"
 import Popular from "./components/PopularHotel/Popular"
+import Footer from "./components/Footer/Footer"
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         </Routes>
         <Popular/>
         <Facilities/>
+        <Footer/>
       </BrowserRouter>
     </>
   )

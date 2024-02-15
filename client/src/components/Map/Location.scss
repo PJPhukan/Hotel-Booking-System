@@ -1,1 +1,86 @@
-@import "../../css-config/mixins.scss"
+@import "../../css-config/mixins.scss";
+
+.location-header {
+    width: 100%;
+    padding: 1rem 2.5rem;
+    position: relative;
+
+    .location-content {
+        position: absolute;
+        border-radius: 1rem;
+        bottom: 3rem;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        margin: 0 5rem;
+        padding: 1rem 2rem;
+
+        @include md {
+            flex-direction: row;
+        }
+
+        .box {
+            width: 40%;
+
+            .header {
+                font-size: 1.5rem;
+                padding: 1rem 0;
+                color: rgba($color: #000000, $alpha: .8);
+            }
+
+            .text {
+                color: rgba($color: #000000, $alpha: .5);
+            }
+        }
+
+        .form {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+
+            input {
+                width: 200px;
+                height: 40px;
+                border: 1px solid rgba($color: black, $alpha: .5);
+                outline: none;
+                padding: 0 10px;
+                font-size: 14px;
+
+                @include md {
+                    width: 300px;
+                }
+
+            }
+
+            button {
+                height: 40px;
+                width: 100px;
+                padding: 0 12px;
+                font-size: 14px;
+                color: white;
+                background-color: green;
+                cursor: pointer;
+                border-bottom: 3px solid green;
+
+                @include md {
+                    width: 120px;
+                }
+            }
+        }
+    }
+
+    .img {
+        width: 100%;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 90vh;
+            object-fit: cover;
+        }
+    }
+
+}

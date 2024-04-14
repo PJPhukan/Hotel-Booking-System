@@ -17,16 +17,18 @@ const roomSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    capacity:{
-        type:Number,
-        required:true
+    capacity: {
+      type: Number,
+      required: true,
     },
-    isBooked:{
-        type:Boolean,
-        default:false
-    }
+    isBooked: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
   }
 );
+const Room = mongoose.model("Room", roomSchema);
+export { Room };

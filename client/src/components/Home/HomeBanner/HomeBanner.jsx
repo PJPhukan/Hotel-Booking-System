@@ -24,7 +24,7 @@ const HomeBanner = () => {
 
 
         <div className="img-box">
-          <img src={HomeImg} alt="" />
+          <img src={HomeImg} alt="" className='homeImg'/>
 
           {
             showVideo && <div className="video-box">
